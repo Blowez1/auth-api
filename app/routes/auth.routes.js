@@ -17,7 +17,7 @@ module.exports = function (app) {
 
   app.post(
     "/api/auth/signup",
-    [ verifyReCaptcha,
+    [
       verifySignUp.checkDuplicateUsernameOrEmail,
       verifySignUp.checkRolesExisted
     ],
